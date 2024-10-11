@@ -1,0 +1,779 @@
+/* Existing styles ... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #aea2a2;
+    color: #333;
+    perspective: 1000px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #161515;
+    padding: 20px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    float: right;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    background: url('eimage/3d-rendering-black-white-optical-illusion_23-2150853494.avif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 60px;
+    color: #fff;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.hero-description {
+    font-size: 24px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.hire-me-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3476bd; /* Change this color to your desired button color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #367ac3; /* Darker shade for hover effect */
+}
+
+.about {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+/* General styles for the about section */
+.about {
+    position: relative; /* Position relative for placing animated circles */
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Hide overflow for moving circles */
+}
+
+/* Moving circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: moveLeftRight 10s ease-in-out infinite; /* Animation loop */
+}
+
+/* Black circle */
+.circle.black {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: -10%; /* Start off-screen */
+}
+
+/* Gray circle */
+.circle.gray {
+    background-color: gray;
+    width: 80px;
+    height: 80px;
+    top: 30%;
+    left: -15%; /* Start off-screen */
+    animation-delay: 5s; /* Delayed animation */
+}
+
+/* Left-right animation */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(110%); /* Move across the screen */
+    }
+    100% {
+        transform: translateX(0); /* Move back */
+    }
+}
+
+/* Slide-in effect for the text */
+.about-text {
+    opacity: 1;
+    animation: slideIn 120s ease-in-out forwards; /* Lasts for 2 minutes */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation for the text */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Button hover effect */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #508fd2;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #313dbc;
+    transform: scale(1.05);
+}
+
+/* Container for about content */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.skills {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+/* Portfolio Section Styling */
+.portfolio-section {
+    padding: 50px 0;
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #aaa;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 30%;
+    margin-bottom: 30px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.portfolio-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.portfolio-info p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.likes {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #f00;
+}
+
+.likes i {
+    margin-right: 5px;
+}
+
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 50px 0;
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 15%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #aaa;
+}
+.skill-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+/* General styles for the skills section */
+.skills-section {
+    padding: 50px 0;
+    background-color: #131212;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-item {
+    text-align: center;
+    flex: 1 1 200px; /* Makes the items responsive */
+    padding: 20px;
+    background-color: #f8f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start with a slight downward position */
+    animation: bounceIn 1s forwards; /* Apply bounce-in animation */
+}
+
+.skill-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.skill-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.skill-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.skill-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.skill-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.skill-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.skill-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+.skill-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+.skill-item:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+/* Skill icons */
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Bounce-in animation */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+
+.projects {
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+
+.portfolio-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Contact Section Styling */
+.contact {
+    padding: 60px 0;
+    background-color: #1b1b1b;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.linkedin-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.linkedin-button:hover {
+    background-color: #005582; /* Darker blue on hover */
+}
+
+.linkedin-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+.contact-form {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 48%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group textarea {
+    width: 100%;
+    resize: none;
+}
+
+.btn {
+    background-color: #5110e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1948e1;
+}
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D Animation */
+.about-text {
+    transform-style: preserve-3d;
+    animation: rotate3D 10s infinite;
+}
+
+@keyframes rotate3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Dynamic Text Animation */
+.dynamic-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Buttons Styling */
+.hero-links {
+    margin-top: 20px;
+}
+
+/* Hover effect for buttons */
+.btn {
+    background-color: #4020dd;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1c39e2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Adding fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating animation for moving designs */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Section Animations */
+.header, .hero, .about, .skills-section, .portfolio-section, .contact, .footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation on page load */
+.header {
+    animation-delay: 0.2s;
+}
+
+.hero {
+    animation-delay: 0.4s;
+}
+
+.about {
+    animation-delay: 0.6s;
+}
+
+.skills-section {
+    animation-delay: 0.8s;
+}
+
+.portfolio-section {
+    animation-delay: 1s;
+}
+
+.contact {
+    animation-delay: 1.2s;
+}
+
+.footer {
+    animation-delay: 1.4s;
+}
+
+/* Floating design elements */
+.floating-design {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+}
+
+.floating-design-2 {
+    top: 40%;
+    left: 70%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 2s;
+}
+
+.floating-design-3 {
+    top: 70%;
+    left: 20%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 4s;
+}
+
+/* Responsive animation speed */
+@media (max-width: 768px) {
+    .floating-design,
+    .floating-design-2,
+    .floating-design-3 {
+        animation-duration: 8s;
+    }
+}
+/* Global styles for fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adding delays for sequential fade-in */
+.about { animation-delay: 0.5s; }
+.skills-section { animation-delay: 1s; }
+.portfolio-section { animation-delay: 1.5s; }
+.contact { animation-delay: 2s; }
+
+/* Floating design elements */
+.floating-design, .floating-design-2, .floating-design-3 {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(246, 239, 239, 0.1);
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Different sizes for the floating elements */
+.floating-design {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 5%;
+}
+
+.floating-design-2 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 80%;
+}
+
+.floating-design-3 {
+    width: 200px;
+    height: 200px;
+    top: 80%;
+    left: 20%;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
